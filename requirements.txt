@@ -9,7 +9,6 @@ flask-ngrok==0.0.25
 imutils==0.5.4
 matplotlib==3.2.2
 nltk==3.2.5
-numpy
 opencv-python
 pandas==1.1.5
 Pillow==7.1.2
