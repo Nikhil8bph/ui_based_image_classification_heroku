@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <img src="{{url_for('static', filename='logo.jpg')}}" alt="N-Square"/>
+</div>
+<div id="myRadioGroup">
+    <form method="POST">
+        <h1>SVC Classifier</h1>
+        <h3>Image Shape to read</h3>
+        <input type="text" name="shape1" value="224" id="shape1" >
+        <label for="shape1">shape 0 </label><br>
+        <input type="text" name="shape2" value="224" id="shape2" >
+        <label for="shape1">shape 1 </label><br>
+        <h3>Kernal</h3>
+        <input type="radio" name="kernal" value="linear" id="linear" checked>
+        <label for="linear">linear</label><br>
+        <input type="radio" name="kernal" value="poly" id="poly" >
+        <label for="poly">poly</label><br>
+        <input type="radio" name="kernal" value="rbf" id="rbf" >
+        <label for="rbf">rbf</label><br>
+        <input type="radio" name="kernal" value="sigmoid" id="sigmoid" >
+        <label for="sigmoid">sigmoid</label><br>
+        <input type="radio" name="kernal" value="precomputed" id="precomputed" >
+        <label for="precomputed">precomputed</label><br>
+        <h3>gamma</h3>
+        <input type="radio" name="gamma" value="scale" id="scale" checked>
+        <label for="scale">scale</label><br>
+        <input type="radio" name="gamma" value="auto" id="auto">
+        <label for="auto">auto</label><br>
+        <h3>decision_function_shape</h3>
+        <input type="radio" name="decision_function_shape" value="ovr" id="ovr" checked>
+        <label for="ovr">ovr</label><br>
+        <input type="radio" name="decision_function_shape" value="ovo" id="ovo">
+        <label for="ovo">ovo</label><br>
+        <h3>Random State</h3>
+        <input type="text" name="random_state" value="None" id="random_state" >
+        <label for="random_state">random_state</label><br>
+        <h3>Max Iters</h3>
+        <input type="text" name="max_iter" value="-1" id="max_iter" >
+        <label for="max_iter">max_iter</label><br>
+        <input type="submit">
+    </form>
+</div>
+<div>
+    <h3>Cross Validation Score</h3>
+    {{something}}
+    <h3>Download Model</h3>
+    <h4><a href="{{ url_for('.download_all')}}" target="blank">Download</a></h4>
+</div>
+</body>
+</html>

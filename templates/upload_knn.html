@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <img src="{{url_for('static', filename='logo.jpg')}}" alt="N-Square"/>
+</div>
+<div id="myRadioGroup">
+    <form method="POST">
+        <h1>KNN Classifier</h1>
+        <h3>Image Shape to read</h3>
+        <input type="text" name="shape1" value="224" id="shape1" >
+        <label for="shape1">shape 0 </label><br>
+        <input type="text" name="shape2" value="224" id="shape2" >
+        <label for="shape1">shape 1 </label><br>
+        <h3>weights</h3>
+        <input type="radio" name="weights" value="uniform" id="uniform" checked>
+        <label for="uniform">uniform</label><br>
+        <input type="radio" name="weights" value="distance" id="distance" >
+        <label for="distance">distance</label><br>
+        <h3>algorithm</h3>
+        <input type="radio" name="algorithm" value="auto" id="auto" checked>
+        <label for="auto">auto</label><br>
+        <input type="radio" name="algorithm" value="ball_tree" id="ball_tree" >
+        <label for="ball_tree">ball_tree</label><br>
+        <input type="radio" name="algorithm" value="kd_tree" id="kd_tree" >
+        <label for="kd_tree">kd_tree</label><br>
+        <input type="radio" name="algorithm" value="brute" id="brute" >
+        <label for="brute">brute</label><br>
+        <h3>leaf_size</h3>
+        <input type="text" name="leaf_size" value="30" id="leaf_size" >
+        <label for="leaf_size">leaf_size</label><br>
+        <h3>n_neighbors</h3>
+        <input type="text" name="n_neighbors" value="5" id="n_neighbors" >
+        <label for="n_neighbors">n_neighbors</label><br>
+        <input type="submit">
+    </form>
+</div>
+<div>
+    <h3>Cross Validation Score</h3>
+    {{something}}
+    <h3>Download Model</h3>
+    <h4><a href="{{ url_for('.download_all')}}" target="blank">Download</a></h4>
+</div>
+</body>
+</html>

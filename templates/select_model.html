@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Model</title>
+</head>
+<body>
+<div>
+    <img src="{{url_for('static', filename='logo.jpg')}}" alt="N-Square"/>
+</div>
+<h1>Select Model</h1>
+<div id="myRadioGroup">
+    <form method="POST">
+        <input type="radio" name="hello" value="1" id="svc"  checked>
+        <label for="svc">Support Vector Classifier</label><br>
+        <input type="radio" name="hello" value="2" id="knn" >
+        <label for="knn">K Nearest Neighbour</label><br>
+        <input type="radio" name="hello" value="3" id="lr_reg" >
+        <label for="lr_reg">Decision Tree Classifier</label><br>
+        <input type="radio" name="hello" value="4" id="adaboost" >
+        <label for="adaboost">AdaBoost Classifier</label><br>
+        <input type="radio" name="hello" value="5" id="naive">
+        <label for="naive">Naive Bayes(Gaussian)</label><br>
+        <input type="radio" name="hello" value="6" id="resnet18">
+        <label for="resnet18">resnet18</label><br>
+        <input type="radio" name="hello" value="7" id="resnet34">
+        <label for="resnet34">resnet34</label><br>
+        <input type="radio" name="hello" value="8" id="resnet50">
+        <label for="resnet50">resnet50</label><br>
+        <input type="radio" name="hello" value="9" id="resnet101">
+        <label for="resnet101">resnet101</label><br>
+        <input type="radio" name="hello" value="10" id="resnet152">
+        <label for="resnet152">resnet152</label><br>
+        <input type="radio" name="hello" value="11" id="densenet121">
+        <label for="densenet121">densenet121</label><br>
+        <input type="radio" name="hello" value="12" id="densenet169">
+        <label for="densenet169">densenet169</label><br>
+        <input type="radio" name="hello" value="13" id="densenet201">
+        <label for="densenet201">densenet201</label><br>
+        <input type="radio" name="hello" value="14" id="densenet161">
+        <label for="densenet161">densenet161</label><br>
+        <input type="radio" name="hello" value="15" id="alexnet">
+        <label for="alexnet">alexnet</label><br>
+        <input type="radio" name="hello" value="16" id="squeezenet1_0">
+        <label for="squeezenet1_0">squeezenet1_0</label><br>
+        <input type="radio" name="hello" value="17" id="squeezenet1_1">
+        <label for="squeezenet1_1">squeezenet1_1</label><br>
+        <input type="radio" name="hello" value="18" id="vgg11">
+        <label for="vgg11">vgg11</label><br>
+        <input type="radio" name="hello" value="19" id="vgg11_bn">
+        <label for="vgg11_bn">vgg11_bn</label><br>
+        <input type="radio" name="hello" value="20" id="vgg13">
+        <label for="vgg13">vgg13</label><br>
+        <input type="radio" name="hello" value="21" id="vgg13_bn">
+        <label for="vgg13_bn">vgg13_bn</label><br>
+        <input type="radio" name="hello" value="22" id="vgg16">
+        <label for="vgg16">vgg16</label><br>
+        <input type="radio" name="hello" value="23" id="vgg16_bn">
+        <label for="vgg16_bn">vgg16_bn</label><br>
+        <input type="radio" name="hello" value="24" id="vgg19">
+        <label for="vgg19">vgg19</label><br>
+        <input type="radio" name="hello" value="25" id="vgg19_bn">
+        <label for="vgg19_bn">vgg19_bn</label><br>
+        <input type="submit">
+    </form>
+</div>
+<div>
+    <h3>Number of classes : </h3>
+    {{num_class}}
+</div>
+</body>
+</html>

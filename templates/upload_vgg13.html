@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <img src="{{url_for('static', filename='logo.jpg')}}" alt="N-Square"/>
+</div>
+<div id="myRadioGroup">
+    <form method="POST">
+        <h1>Vgg 13</h1>
+        <h3>Augmentation</h3>
+        <input type="radio" name="augmentation" value="1" id="on" checked>
+        <label for="on">on</label><br>
+        <input type="radio" name="augmentation" value="0" id="off" >
+        <label for="off">off</label><br>
+        <input type="text" name="epochs" value="5" id="epochs" >
+        <label for="epochs">epochs</label><br>
+        <input type="text" name="validation_split" value="0.2" id="validation_split" >
+        <label for="validation_split">validation_split</label><br>
+        <input type="submit">
+    </form>
+</div>
+<div>
+    <h3>Accuracy Score</h3>
+    {{something}}
+    <h3>Download Model</h3>
+    <h4><a href="{{ url_for('.download_all')}}" target="blank">Download</a></h4>
+</div>
+</body>
+</html>

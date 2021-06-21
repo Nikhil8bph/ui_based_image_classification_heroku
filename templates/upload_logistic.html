@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <img src="{{url_for('static', filename='logo.jpg')}}" alt="N-Square"/>
+</div>
+<div id="myRadioGroup">
+    <form method="POST">
+        <h1>Decision Tree Classifier</h1>
+        <h3>Image Shape to read</h3>
+        <input type="text" name="shape1" value="224" id="shape1" >
+        <label for="shape1">shape 0 </label><br>
+        <input type="text" name="shape2" value="224" id="shape2" >
+        <label for="shape1">shape 1 </label><br>
+        <h3>criterion</h3>
+        <input type="radio" name="criterion" value="gini" id="gini" checked>
+        <label for="gini">gini</label><br>
+        <input type="radio" name="criterion" value="entropy" id="entropy" >
+        <label for="entropy">entropy</label><br>
+        <h3>splitter</h3>
+        <input type="radio" name="splitter" value="best" id="best" checked>
+        <label for="best">best</label><br>
+        <input type="radio" name="splitter" value="random" id="random">
+        <label for="random">random</label><br>
+        <h3>max_depth</h3>
+        <input type="text" name="max_depth" value="None" id="max_depth" >
+        <label for="max_depth">max_depth</label><br>
+        <h3>min_samples_split</h3>
+        <input type="text" name="min_samples_split" value="2" id="min_samples_split">
+        <label for="min_samples_split">min_samples_split</label><br>
+        <h3>min_samples_leaf</h3>
+        <input type="text" name="min_samples_leaf" value="1" id="min_samples_leaf">
+        <label for="min_samples_leaf">min_samples_leaf</label><br>
+        <h3>Random State</h3>
+        <input type="text" name="random_state" value="None" id="random_state" >
+        <label for="random_state">random_state</label><br>
+        <h3>max_features</h3>
+        <input type="radio" name="max_features" value="auto" id="auto" checked>
+        <label for="auto">auto</label><br>
+        <input type="radio" name="max_features" value="sqrt" id="sqrt">
+        <label for="sqrt">sqrt</label><br>
+        <input type="radio" name="max_features" value="log2" id="log2">
+        <label for="log2">log2</label><br>
+        <input type="radio" name="max_features" value="None" id="None">
+        <label for="None">None</label><br>
+        <input type="submit">
+    </form>
+</div>
+<div>
+    <h3>Cross Validation Score</h3>
+    {{something}}
+    <h3>Download Model</h3>
+    <h4><a href="{{ url_for('.download_all')}}" target="blank">Download</a></h4>
+</div>
+</body>
+</html>

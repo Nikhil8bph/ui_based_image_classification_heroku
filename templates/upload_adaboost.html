@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <img src="{{url_for('static', filename='logo.jpg')}}" alt="N-Square"/>
+</div>
+<div id="myRadioGroup">
+    <form method="POST">
+        <h1>AdaBoost Classifier</h1>
+        <h3>Image Shape to read</h3>
+        <input type="text" name="shape1" value="224" id="shape1" >
+        <label for="shape1">shape 0 </label><br>
+        <input type="text" name="shape2" value="224" id="shape2" >
+        <label for="shape1">shape 1 </label><br>
+        <h3>Learning Rate</h3>
+        <input type="text" name="learning_rate" value="0.1" id="learning_rate" >
+        <label for="learning_rate">random_state</label><br>
+        <h3>Random State</h3>
+        <input type="text" name="random_state" value="None" id="random_state" >
+        <label for="random_state">random_state</label><br>
+        <h3>N-Estimators</h3>
+        <input type="text" name="n_estimators" value="100" id="n_estimators" >
+        <label for="n_estimators">n_estimators</label><br>
+        <input type="submit">
+    </form>
+</div>
+<div>
+    <h3>Cross Validation Score</h3>
+    {{something}}
+    <h3>Download Model</h3>
+    <h4><a href="{{ url_for('.download_all')}}" target="blank">Download</a></h4>
+</div>
+</body>
+</html>
